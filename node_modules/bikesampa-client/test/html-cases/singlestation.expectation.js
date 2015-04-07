@@ -1,0 +1,10 @@
+exibirEstacaMapa("-23.587315",
+"-46.647974",
+"img/icone-estacoes.gif",
+"Instituto Biologico",
+"1",
+"I",
+"EM",
+"0",
+"12",
+"Rua Morgado de Mateus, em frente ao numero 652");

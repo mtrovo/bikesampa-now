@@ -1,0 +1,17 @@
+{
+  "name": "bikesampa-now",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moises Trovo <moises.trovo@gmail.com> (http://mtrovo.github.io/)",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "bikesampa-client": "~0.1.3",
+    "express": "^4.12.3",
+    "geolib": "^2.0.14",
+    "swig": "^1.4.2"
+  }
+}

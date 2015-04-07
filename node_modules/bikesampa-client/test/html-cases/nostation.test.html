@@ -1,0 +1,422 @@
+
+
+<html>
+<head>
+<title>Mobilicidade - Portal da mobilidade urbana</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link href="include.css" rel="stylesheet" type="text/css">
+<link href="cssnovo/previsao.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function exibirDivIdioma() {
+document.getElementById('pt-BR').style.display = 'block';
+}
+function horizontal() {
+var navItems = document.getElementById("menu_dropdown").getElementsByTagName("li");
+for (var i=0; i< navItems.length; i++) {
+if(navItems[i].className == "submenu")
+{
+if(navItems[i].getElementsByTagName('ul')[0] != null)
+{
+navItems[i].onmouseover=function() {this.getElementsByTagName('ul')[0].style.display="block";}
+navItems[i].onmouseout=function() {this.getElementsByTagName('ul')[0].style.display="none";}
+}
+}
+}
+
+}
+</script>
+</head>
+<body onload="horizontal();" topmargin="0" leftmargin="0">
+<div id="geral">
+<html>
+<head>
+<title>Mobilicidade - Portal da mobilidade urbana</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link href="include.css" rel="stylesheet" type="text/css">
+<link href="cssnovo/previsao.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function exibirDivIdioma() {
+document.getElementById('pt-BR').style.display = 'block';
+}
+function horizontal() {
+var navItems = document.getElementById("menu_dropdown").getElementsByTagName("li");
+for (var i=0; i< navItems.length; i++) {
+if(navItems[i].className == "submenu")
+{
+if(navItems[i].getElementsByTagName('ul')[0] != null)
+{
+navItems[i].onmouseover=function() {this.getElementsByTagName('ul')[0].style.display="block";}
+navItems[i].onmouseout=function() {this.getElementsByTagName('ul')[0].style.display="none";}
+}
+}
+}
+
+}
+</script>
+</head>
+<body onload="horizontal();" topmargin="0" leftmargin="0">
+<div id="geral">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34479361-3']);
+_gaq.push(['_setDomainName', 'mobilicidade.com.br']);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script language="Javascript">
+function checkFormLgn() {
+if (frmLgn.txt_email.value == "") {
+alert("Digite seu e-mail cadastrado!")
+frmLgn.txt_email.focus()
+return false
+}
+if (frmLgn.txt_password.value == "") {
+alert("Digite sua senha!")
+frmLgn.txt_password.focus()
+return false
+}
+frmGid.redirFailure.value = "/bikesampa/globalIdLogin.asp?url=/bikesampa/home.asp&msg=Login Inválido!&redirpageMode=&email=" + frmGid.txt_email.value
+}
+function remindPass() {
+if (frmLgn.txt_email.value == "") {
+alert("Digite seu e-mail cadastrado!")
+frmLgn.txt_email.focus()
+} else {
+//frmGid.redirSuccess.value = "/bikesampa/globalIdLogin.asp?url=/bikesampa/home.asp&redirpageMode=&email=" + frmGid.txt_email.value + "&msg=sua senha foi enviada com sucesso para o e-mail ´" + frmGid.txt_email.value + "´"
+//frmGid.redirFailure.value = "/bikesampa/globalIdLogin.asp?url=/bikesampa/home.asp&redirpageMode=&email=" + frmGid.txt_email.value + "&msg=não foi possível enviar a senha para o e-mail ´" + frmGid.txt_email.value + "´"
+//frmGid.action = "/globalAsp/globalIdRemindPass.asp?email=" + frmGid.txt_email.value
+//document.forms['frmGid'].submit()
+frmLgn.redirSuccess.value = "home.asp"
+document.forms['frmLgn'].submit()
+}
+}
+function assinaturaHTTPS() {
+self.parent.location.href = '/bikesampa/assinatura.asp';
+}
+</script>
+<!-- INICIO | Banner Float -->
+<!-- FIM | Banner Float-->
+<div id="cabecalho" style="width: 770px;">
+<!-- inicio logomarca twitter/facebook -->
+<!--<div class="logoTwitter"><a href="http://i.instagram.com/SambaTransportesSustentaveis" target="_blank"><img src="imgnovo/instagram.png" alt="" border="0"/></a></div>
+<div class="logoFacebook"><a href="https://www.facebook.com/SambaTransportesSustentaveis?fref=ts" target="_blank"><img src="imgnovo/facebook.png" alt="" border="0"/></a></div>-->
+<!-- fim logomarca twitter/facebook -->
+<!-- inicio login -->
+<div align="right" style="width:770px;">
+
+<form name="frmLgn" id="frmLgn" method="POST" onsubmit="return checkFormLgn()" action="/globalAsp/globalIdLogin_mobc2.asp">
+<table cellpadding="1px" cellspacing="0" border="0">
+<tr>
+<td align="left" width="100%">
+<a href="http://www.issomudaomundo.com.br">
+<img src="imgnovo/hastag.png" border="0">
+</a>
+</td>
+<td>
+<table cellpadding="0" cellspacing="0" border="0" width="500px;">
+<tr>
+<td class="corLaranjaLink" valign="middle">
+<a href="https://ww2.mobilicidade.com.br/bikesampa/globalidcadastro.asp">
+Cadastre-se •
+</a>
+</td>
+<td class="corLaranja" valign="middle">
+E-mail
+</td>
+<td valign="middle">
+<input class="campoLoginNovo" type="text" name="txt_email" id="txt_email" value=""
+size="10" maxlength="50" />
+</td>
+<td class="corLaranja" valign="middle">
+Senha
+</td>
+<td valign="middle">
+<input class="campoLoginNovo" type="password" name="txt_password" id="txt_password"
+size="10" maxlength="16" />
+</td>
+<td valign="middle">
+<input type="image" name="imageField" src="imgnovo/ok.png" />
+</td>
+<td class="corLaranjaLink" valign="middle">
+<a href="/bikesampa/globalIdLogin.asp">
+Esqueci a senha</a>
+</td>
+</tr>
+</table>
+</tr>
+</table>
+<input type="hidden" name="nomeSite" id="nomeSite" value="bikesampa">
+<input type="hidden" name="redirPageMode" value="">
+<input type="hidden" name="redirSuccess" id="redirSuccess" value="/bikesampa/home.asp">
+<input type="hidden" name="redirFailure" id="redirFailure" value="/bikesampa/globalIdLogin.asp?msg=Login Inválido!&url=/bikesampa/home.asp">
+<input type="hidden" name="siteId" value="mobilicidade">
+</form>
+
+</div>
+<!-- fim login -->
+<!-- inicio logomarca pelario/itau -->
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+<div class="logomarca">
+<div class="logoItau" style="float:left">
+<a href="http://www.itau.com.br/" target="_blank"><img src="imgnovo/itauMaior.png" alt="" border="0"/></a>
+</div>
+<div class="logoItau" style="float:left">
+<a href="http://www.serttel.com.br/" target="_blank"><img src="imgnovo/logo-serttel.png" alt="" border="0" style="margin-left:35px"/></a>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<!-- fim logomarca pelario/itau  -->
+<!-- inicio menu -->
+<div class="menuzae">
+<div id="divtwitter" style="position:absolute; display:block; height:17px; width:17px; left: 720px; top:3px;">
+<a href="http://i.instagram.com/SambaTransportesSustentaveis" target="_blank">
+<img src="imgnovo/instagram.png" alt="" border="0" width="17px" height="17px"/>
+</a>
+</div>
+<div id="divfacebook" style="position:absolute; display:block; height:17px; width:17px; left: 740px; top:3px;">
+<a href="https://www.facebook.com/SambaTransportesSustentaveis?fref=ts" target="_blank">
+<img src="imgnovo/facebook-logo.png" alt="" border="0" width="17px" height="17px"/>
+</a>
+</div>
+<ul id="menu_dropdown" class="menubar">
+<li class="submenu"><a href="/bikesampa/home.asp">Home</a></li>
+<li class="submenu"><a href="#">Passe</a>
+<ul class="menu">
+<li><a href="https://ww2.mobilicidade.com.br/bikesampa/assinatura.asp"    target="_parent" >Habilitar Passe</a></li>
+<li><a href="/bikesampa/gerenciarcartao.asp" target="_parent" >Associar Cartao B.U.</a></li>
+<li><a href="https://ww2.mobilicidade.com.br/bikesampa/cancelarpasse.asp" target="_parent" >Cancelar Passe</a></li>
+</ul>
+</li>
+<li class="submenu"> <a href="#">Extrato</a>
+<ul class="menu">
+<li><a href="/bikesampa/ordershistory.asp">Pagamentos</a></li>
+<li><a href="/bikesampa/gridmovimento.asp">Utilizações</a></li>
+<!--<li><a href="#">Cancelar Passe</a></li>-->
+</ul>
+</li>
+<li class="submenu"> <a href="#">Informações</a>
+<ul class="menu">
+<li><a href="/bikesampa/sobre.asp">Sobre o Bike Sampa</a></li>
+<li><a href="/bikesampa/cartao.asp">Bilhete Único</a></li>
+<li><a href="/bikesampa/comoutilizar.asp">Como Utilizar</a></li>
+<li><a href="/bikesampa/duvidas.asp">Dúvidas</a></li>
+<li><a href="/bikesampa/mapaestacao.asp">Localização Estações</a></li>
+<li><a href="javascript:window.open('/bikesampa/contratoprint.asp','Imprimir','width=740,heigth=300,scrollbars=yes'); void(0)">Termo de Adesão e Uso</a></li>
+</ul>
+</li>
+<li class="submenu"><a href="/bikesampa/faleconosco.asp">Fale conosco</a></a></li>
+
+</ul>
+</div>
+<!-- fim menu    -->
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript" src="js/markerwithlabel.js"></script>
+<style>
+html, body {
+height: 100%;
+}
+#map-canvas, #map_canvas {
+width : 750px;
+height: 500px;
+}
+.labelMapa{
+font-family:Arial;
+font-size:12px;
+font-weight:bold;
+}
+</style>
+<script>
+var map;
+var infowindowEstacaoArray = [];
+var pathKML                = ""; // utilizar url caso queira mapa tipo KLM
+var arrayEstacao           = [];
+var arrayPontoTuristico    = [];
+// inicializa mapa com um ponto central
+function initialize() {
+var pontoCentral = new google.maps.LatLng(-23.585149,-46.657991); //(-8.06264, -34.872783);
+var myOptions = {
+zoom: 15,
+center: pontoCentral,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+// exibe mapa
+map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+// exibe rota baseada em arquivo KML
+if(pathKML != ""){
+var ctaLayer = new google.maps.KmlLayer(pathKML);
+ctaLayer.setMap(map);
+}
+
+function exibirEstacaMapa(latitude, longitude, icone, Nome, IdEstacao, StatusOnline, StatusOperacao, VagasOcupadas, numBicicletas, Endereco) {
+var myLatlng     = new google.maps.LatLng(latitude, longitude);
+var strCaminho   = "";
+var varTableHTML = "";
+var myOptions = {
+center   : myLatlng,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+// recupera icone do mapa
+if((StatusOperacao == "EO") && (StatusOnline == "A")){
+strCaminho = "img/icone-estacoes.gif";
+if(VagasOcupadas == 0){
+strCaminho = "img/icone-estacoes-vazia.gif";
+}
+if(numBicicletas == VagasOcupadas){
+strCaminho = "img/icone-estacoes-cheia.gif";
+}
+}else if((StatusOperacao == "EI") || (StatusOperacao == "EM")){
+strCaminho = "img/icone-estacoes-cinza.gif";
+}else{
+strCaminho = "img/icone-estacoes-desativado.gif";
+}
+// formata informacao concatenando com zero ex.: 01,02... 09, 10
+if(IdEstacao <= 9){
+IdEstacao = "0".concat(IdEstacao);
+}
+// configura icone
+var imageIcone = {
+url       : strCaminho,
+size      : new google.maps.Size(33,33),
+origin    : new google.maps.Point(0,0),
+anchor    : new google.maps.Point(20,34),
+scaledSize: new google.maps.Size(33,33)
+};
+// configurar label
+var marker = new MarkerWithLabel({
+position    : myLatlng,
+map         : map,
+icon        : imageIcone,
+labelContent: IdEstacao,
+labelAnchor : new google.maps.Point(10, 0),
+labelStyle  : { opacity: 0.75 },
+labelClass  : "labelMapa"
+});
+// armazena pontos
+arrayEstacao.push(marker);
+//Processando 'status online'
+if((StatusOperacao == "EI") || (StatusOperacao == "EM")){
+StatusOnline = "Em Implantação ou Em Manutenção";
+}else{
+if (StatusOnline == "A" && StatusOperacao == "EO" ){
+StatusOnline = "Em Operação";
+} else {
+StatusOnline = "OffLine";
+}
+}
+// montar informacao
+varTableHTML = "<table><tr>";
+varTableHTML += "<td align='left' valign='middle' width='30'><img src='" + strCaminho + "' /></td>";
+varTableHTML += "<td align='left'><font face='arial' size='1'><b><br/>" + IdEstacao + ". " + Nome + "</b><br/><br/></font></td>";
+varTableHTML += "</tr>";
+varTableHTML += "<tr align='left'>"
+varTableHTML += "<td colspan='2'><font face='arial' size='1'><b>Status:</b> " + StatusOnline + "</td>";
+varTableHTML += "</tr>";
+varTableHTML += "<tr align='left'>"
+varTableHTML += "<td colspan='2'><font face='arial' size='1'><b>Endereco:</b> " + Endereco + "</font></td>";
+varTableHTML += "</tr>";
+varTableHTML += "<tr align='left'>"
+varTableHTML += "<td colspan='2'><font face='arial' size='1'><b>Bicicletas disponíveis:</b> " + VagasOcupadas + "</font></td>";
+varTableHTML += "</tr>";
+varTableHTML += "<tr align='left'>"
+varTableHTML += "<td colspan='2'><font face='arial' size='1'><b>Vagas livres:</b> " + (numBicicletas - VagasOcupadas) + "</font></td>";
+varTableHTML += "</tr></table><br/><br/>";
+//Mensagem do maptip
+var infowindow = new google.maps.InfoWindow({
+content:  varTableHTML//,
+//maxWidth: 100
+});
+// armazena informacoes no array
+infowindowEstacaoArray.push(infowindow);
+//Adiciona evento de click na marca
+google.maps.event.addListener(marker, 'click', function () {
+// fechar todos os baloes
+for (i in infowindowEstacaoArray) {
+infowindowEstacaoArray[i].close();
+}
+infowindow.open(map, marker);
+});
+}
+</script>
+<div id="total">
+<div style="padding-left:10px;">
+<br />
+<font class="textoGeralNovo" style="color:#6baf46; font-size:18px;" ><b>Mapa das Estações</b></font>
+<br /><br />
+<font class="textoGeralNovo" font-size:14px;" ><b>  Legenda:  </b></font>
+<br /><br />
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td><img src="img/icone-estacoes-cinza.gif" width="26" height="26" alt="" /></td>
+<td>&nbsp; <font class="textoGeralNovo" font-size:14px;">   Em Implantação ou Em Manutenção    </font></td>
+<td> <img src="img/icone-estacoes.gif" width="26" height="26" alt="" /></td>
+<td>&nbsp; <font class="textoGeralNovo" font-size:14px;">    Em Operação    </font></td>
+</tr>
+<td>&nbsp;&nbsp;</td>
+<tr>
+<td><img src="img/icone-estacoes-desativado.gif" width="26" height="26" alt="" /></td>
+<td>&nbsp;<font class="textoGeralNovo" font-size:14px;">    OffLine    </font></td>
+<td> <img src="img/icone-estacoes-vazia.gif" width="26" height="26" alt="" /></td>
+<td>&nbsp;<font class="textoGeralNovo" font-size:14px;">    Nenhuma bicicleta disponível     </font>
+</tr>
+<td>&nbsp;&nbsp;</td>
+<tr>
+<td><img src="img/icone-estacoes-cheia.gif" width="26" height="26" alt="" /></td>
+<td>&nbsp; <font class="textoGeralNovo" font-size:14px;">    Todas as vagas ocupadas    </font>
+<td> </td>
+<td> </td>
+</td>
+<tr>
+<td><img src="img/bu.gif" width="26" height="26" alt="" style="margin-top:10px;"/></td>
+<td>&nbsp; <font class="textoGeralNovo" font-size:14px;">Todas as estações Bike Sampa estão integradas com o Bilhete único </font></td>
+</tr>
+</table>
+<br/><br />
+<!-- div mapa -->
+<div id="map-canvas"></div>
+</div>
+</div>
+<script type="text/javascript">initialize();</script>
+
+<div id="rodape">
+<!-- Início do Rodapé -->
+<div class="rodapeNovo">
+<table height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="198" style="color:#666; font-size:11px; font-family:Arial;">
+<b>Central de Informações</b><br />
+Call Center/ Centro de Información:<br />
+4003 6055
+</td>
+<td width="157" align="center">
+<a href="http://www.capital.sp.gov.br/" target="_blank">
+<img  width="47" height="32" src="imgnovo/prefeitura-sp.png" border="0">
+</a>
+</td>
+<td width="100" align="center"><a href="http://www.serttel.com.br/" target="_blank"><img  width="36" height="32" src="imgnovo/serttel.png" border="0"></a></td>
+<td width="100" align="center"><a href="http://www.serttel.com.br/" target="_blank"><img  width="42" height="33" src="imgnovo/logo-samba.png" border="0"></a></td>
+<td width="120" align="center"><a href="http://www.mobilicidade.com.br/" target="_blank"><img  width="66" height="24" src="imgnovo/mobilicidade.png" border="0"></a></td>
+<td width="250" align="left" style="color:#666; font-size:11px; font-family:Arial;"><b>Endereço:</b> Rua Doze de Setembro, 835 - Vila Guilherme - São Paulo - SP. CEP:02052-001
+<br>
+<b>CNPJ:</b> 24.144.040/0016-51
+</td>
+</tr>
+</table>
+</div>
+<!-- Fim do Rodapé -->
+</div>
+</div>
+</body>
+</html></div>
+</body>
+</html>
