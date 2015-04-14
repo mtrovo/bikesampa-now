@@ -1,14 +1,48 @@
 var express = require('express');
 var BikeSampaClient = require('bikesampa-client').CachedBikeSampaClient;
 var geolib = require('geolib');
+var morgan = require('morgan');
 
 bikesampa = new BikeSampaClient({ttl: 60});
 
 var app = express();
+app.use(morgan('dev'));
+
 var port = process.env.PORT || 8000;
 console.dir(bikesampa);
 
+function orderStationsByDistance (ref, stations) {
+	return geolib.orderByDistance(ref, stations)
+	.map(function(el){
+		var cur = stations[el.key];
+		cur.distance = el.distance;
+		return cur;
+	});
+}
+
 var api = express.Router();
+api.get('/now', function(req, res, next) {
+	bikesampa.getAll(function(err, stations) {
+		if(err) next(req, res, err);
+		else {
+			var working = Object.keys(stations).map(k => stations[k])
+					.filter(el => el.status === "working");
+			var availIn = working.filter(el => el.freePositions > 0);
+			var availOut = working.filter(el => el.availableBikes > 0);
+
+			var respDoc = { timestamp: bikesampa.lastModified };
+			if(!!req.query.lat && !!req.query.lng){
+				var ref = {lat: req.query.lat, lng: req.query.lng};
+				availIn = orderStationsByDistance(ref, availIn).slice(0, 6);
+				availOut = orderStationsByDistance(ref, availOut).slice(0, 6);
+				respDoc.referencePoint = ref;
+			}
+			respDoc.availableIn = availIn;
+			respDoc.availableOut = availOut;
+			res.json(respDoc);
+		}
+	});
+})
 api.get('/stations', function(req, res, next) {
 	bikesampa.getAll(function(err, stations) {
 		if(err) next(req, res, err);

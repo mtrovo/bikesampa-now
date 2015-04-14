@@ -12,6 +12,7 @@
     "bikesampa-client": "~0.1.3",
     "express": "^4.12.3",
     "geolib": "^2.0.14",
+    "morgan": "^1.5.2",
     "swig": "^1.4.2"
   }
 }
