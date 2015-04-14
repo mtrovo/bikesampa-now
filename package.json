@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony server.js"
   },
   "author": "Moises Trovo <moises.trovo@gmail.com> (http://mtrovo.github.io/)",
   "license": "BSD-2-Clause",
@@ -14,5 +15,8 @@
     "geolib": "^2.0.14",
     "morgan": "^1.5.2",
     "swig": "^1.4.2"
+  },
+  "engines": {
+    "node": "0.11.x"
   }
 }
